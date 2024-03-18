@@ -16,13 +16,13 @@ jobs:
       # 指定node版本
       - uses: actions/setup-node@v2 
         with:
-          node-version: '16'
+          node-version: '20'
 
-      - name: npm install
+      - name: pnpm install
         run: npm install  # 安装依赖
 
-      - name: npm run build
-        run: npm run build # 构建项目
+      - name: vite build
+        run: vite build # 构建项目
 
       # 连接到ssh，并且做一个拷贝操作的action
       - name: Deploy 🚀
